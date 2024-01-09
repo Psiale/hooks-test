@@ -29,6 +29,8 @@ jobs:
               run: echo "PR number is $PR_LINK"
     comment-pr:
         runs-on: ubuntu-latest
+        permissions:
+            pull-requests: write
         needs: [get-pr]
         steps:
             - name: Checkout
