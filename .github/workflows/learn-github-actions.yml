@@ -25,4 +25,4 @@ jobs:
         steps:
         - name : Get the pull request number
           id: pr_number
-          run: echo "PR number is https://www.github.com/${{github.repository}}/${{ github.event.number }}"
+          run: echo "PR number is https://www.github.com/${{github.repository}}/pull/${{ github.event.number }}"
