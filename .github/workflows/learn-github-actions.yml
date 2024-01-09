@@ -40,4 +40,4 @@ jobs:
               with:
                 message: |
                     Hello @${{ github.actor }}! Thanks for opening this PR.
-                    You can see the PR [here](${{ env.pr_link }}).
+                    Your link is: (${{ env.pr_link }}).
