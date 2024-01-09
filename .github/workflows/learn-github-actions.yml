@@ -11,7 +11,13 @@ jobs:
                   node-version: 14
             - run: npm install -g bats
             - run: bats --version
-
+    dump-github:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Dump GitHub context
+              env:
+                  GITHUB_CONTEXT: ${{ toJson(github) }}
+              run: echo "$GITHUB_CONTEXT"
     get-pr:
         runs-on: ubuntu-latest
         steps:
