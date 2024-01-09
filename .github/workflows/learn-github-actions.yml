@@ -11,3 +11,10 @@ jobs:
                   node-version: 14
             - run: npm install -g bats
             - run: bats --version
+
+    get-pr:
+        runs-on: ubuntu-latest
+        steps:
+        - name : Get the pull request number
+          id: pr_number
+          run: echo "PR number is www.pr-${{ github.event.number }}"
